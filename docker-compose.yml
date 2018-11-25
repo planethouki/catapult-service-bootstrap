@@ -152,3 +152,17 @@ services:
     - generate-configs
     - api-node-0-nemgen
 
+  block-explorer:
+    image: techbureau/catapult-block-explorer
+    command: ["python", "-m", "http.server", "8000"]
+    ports:
+    - "8000:8000"
+
+  camel:
+    image: 44uk/nem2-camel-docker:latest
+    entrypoint: ["java", "-jar", "/opt/nemtech/bin/nem2-camel.jar", "-url", "http://rest-gateway:3000"]
+    ports:
+    - "9000:9000"
+    depends_on:
+    - rest-gateway
+    - api-node-0

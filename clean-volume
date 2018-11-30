@@ -1,0 +1,12 @@
+#!/bin/bash
+
+docker volume rm catapult_db
+docker volume rm catapult_api-node-0
+docker volume rm catapult_peer-node-0
+docker volume rm catapult_peer-node-1
+
+
+docker volume create catapult_db
+docker volume create catapult_api-node-0
+docker volume create catapult_peer-node-0
+docker volume create catapult_peer-node-1

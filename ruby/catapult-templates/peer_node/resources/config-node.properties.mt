@@ -17,6 +17,8 @@ shortLivedCacheBlockDuration = 100m
 shortLivedCachePruneInterval = 90s
 shortLivedCacheMaxSize = 10'000'000
 
+minFeeMultiplier = 0
+transactionSelectionStrategy = oldest
 unconfirmedTransactionsCacheMaxResponseSize = 20MB
 unconfirmedTransactionsCacheMaxSize = 1'000'000
 
@@ -33,7 +35,7 @@ transactionDisruptorSize = 16384
 transactionElementTraceInterval = 10
 
 shouldAbortWhenDispatcherIsFull = true
-shouldAuditDispatcherInputs = true
+shouldAuditDispatcherInputs = false
 shouldPrecomputeTransactionAddresses = false
 
 outgoingSecurityMode = None

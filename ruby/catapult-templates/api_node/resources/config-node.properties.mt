@@ -35,8 +35,8 @@ transactionDisruptorSize = 16384
 transactionElementTraceInterval = 10
 
 shouldAbortWhenDispatcherIsFull = true
-shouldAuditDispatcherInputs = false
-shouldPrecomputeTransactionAddresses = false
+shouldAuditDispatcherInputs = true
+shouldPrecomputeTransactionAddresses = true
 
 outgoingSecurityMode = None
 incomingSecurityModes = None

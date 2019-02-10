@@ -9,8 +9,8 @@ generationHash = {{network_generation_hash}}
 shouldEnableVerifiableState = true
 shouldEnableVerifiableReceipts = true
 
-currencyMosaicId = 0x0DC6'7FBE'1CAD'29E3
-harvestingMosaicId = 0x2651'4E2A'1EF3'3824
+currencyMosaicId = 0x119E'1566'1E9B'2758
+harvestingMosaicId = 0x2AEC'BFD7'6AE7'411B
 
 blockGenerationTargetTime = 15s
 blockTimeSmoothingFactor = 3000
@@ -22,7 +22,7 @@ maxDifficultyBlocks = 60
 maxTransactionLifetime = 24h
 maxBlockFutureTime = 10s
 
-totalChainImportance = 15'000'000
+totalChainImportance = 17'000'000
 minHarvesterBalance = 500
 
 blockPruneInterval = 360

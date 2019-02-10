@@ -78,7 +78,7 @@ maxNameSize = 64
 # *approximate* days based on blockGenerationTargetTime
 maxNamespaceDuration = 365d
 namespaceGracePeriodDuration = 0d
-reservedRootNamespaceNames = xem, nem, user, account, org, com, biz, net, edu, mil, gov, info, cat
+reservedRootNamespaceNames = xem, nem, user, account, org, com, biz, net, edu, mil, gov, info
 
 namespaceRentalFeeSinkPublicKey = 3E82E1C1E4A75ADAA3CBA8C101C3CD31D9817A2EB966EB3B511FB2ED45B8E262
 rootNamespaceRentalFeePerBlock = 1'000'000

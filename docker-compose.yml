@@ -75,7 +75,6 @@ services:
     - ./build/state:/state
     depends_on:
     - init-db
-    - generate-configs
 
   peer-node-0-nemgen:
     build: dockerfiles/nemgen
@@ -87,8 +86,6 @@ services:
     - ./data/peer-node-0:/data:rw
     - ./bin/bash:/bin-mount
     - ./build/state:/state:rw
-    depends_on:
-    - generate-configs
 
   peer-node-0:
     build: dockerfiles/catapult
@@ -100,7 +97,6 @@ services:
     - ./bin/bash:/bin-mount
     - ./build/state:/state
     depends_on:
-    - generate-configs
     - peer-node-0-nemgen
 
   peer-node-1-nemgen:
@@ -113,8 +109,6 @@ services:
     - ./data/peer-node-1:/data:rw
     - ./bin/bash:/bin-mount
     - ./build/state:/state:rw
-    depends_on:
-    - generate-configs
 
   peer-node-1:
     build: dockerfiles/catapult
@@ -126,7 +120,6 @@ services:
     - ./bin/bash:/bin-mount
     - ./build/state:/state
     depends_on:
-    - generate-configs
     - peer-node-1-nemgen
 
   api-node-0-nemgen:
@@ -139,8 +132,6 @@ services:
     - ./data/api-node-0:/data:rw
     - ./bin/bash:/bin-mount
     - ./build/state:/state:rw
-    depends_on:
-    - generate-configs
 
   api-node-0:
     build: dockerfiles/catapult
@@ -152,6 +143,5 @@ services:
     - ./bin/bash:/bin-mount
     - ./build/state:/state
     depends_on:
-    - generate-configs
     - api-node-0-nemgen
 

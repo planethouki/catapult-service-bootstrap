@@ -22,7 +22,7 @@ maxDifficultyBlocks = 60
 maxTransactionLifetime = 24h
 maxBlockFutureTime = 10s
 
-initialCurrencyAtomicUnits = 8'998'999'998'000'000
+initialCurrencyAtomicUnits = 8'977'999'998'000'000
 maxMosaicAtomicUnits = 9'000'000'000'000'000
 
 totalChainImportance = {{{total_chain_importance}}}

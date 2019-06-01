@@ -15,8 +15,8 @@ module Catapult
   class Config
     class NemesisPropertiesFile
       module TemplateBindings
-        XEM_TOTAL_SUPPLY   = "8'999'999'998'000'000"
-        XEM_ACCOUNT_SUPPLY = "409'090'909'000'000"
+        XEM_TOTAL_SUPPLY   = "8'977'999'998'000'000"
+        XEM_ACCOUNT_SUPPLY = "408'090'909'000'000"
         XEM_NUM_OF_ACCOUNTS = 22 # this has to equal ration XEM_TOTAL_SUPPLY/XEM_ACCOUNT_SUPPLY
         def self.template_bindings(nemesis_keys_info)
           key_info_array = nemesis_keys_info.key_info_array

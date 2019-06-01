@@ -1,3 +1,8 @@
+# properties for nemesis block compatible with catapult signature scheme used in tests
+# for proper generation, update following config-network properties:
+# - shouldEnableVerifiableState = false
+# - shouldEnableVerifiableReceipts = false
+
 [nemesis]
 
 networkIdentifier = {{network_identifier}}
@@ -35,7 +40,6 @@ duration = 0
 supply = 8'999'999'998'000'000
 isTransferable = true
 isSupplyMutable = false
-isLevyMutable = false
 
 [distribution>cat:currency]
 {{#cat_currency_distribution}}
@@ -49,7 +53,6 @@ duration = 0
 supply = 15'000'000
 isTransferable = true
 isSupplyMutable = true
-isLevyMutable = false
 
 [distribution>cat:harvest]
 {{#cat_harvest_distribution}}

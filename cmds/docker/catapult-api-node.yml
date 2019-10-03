@@ -17,7 +17,34 @@ version: '2'
 services:
 
   ###### running services ###########
+  db:
+    image: mongo
+    command: bash -c "mongod --dbpath=/dbdata --bind_ip=db"
+    stop_signal: SIGINT
+    volumes:
+    - ../../data/mongo:/dbdata:rw
+    - ../../bin/bash:/bin-mount
 
+  init-db:
+    image: mongo
+    command:  bash -c "/bin/bash /userconfig/mongors.sh"
+    volumes:
+    - ../../data/mongo:/dbdata:rw
+    - ../../static-config/mongo/:/userconfig/:ro
+    - ../../bin/bash:/bin-mount
+    depends_on:
+    - db
+
+  api-node-0:
+    build: dockerfiles/catapult
+    command: bash -c "/bin-mount/wait /state/api-node-0-broker && /bin/bash /userconfig/startApiServer.sh"
+    stop_signal: SIGINT
+    volumes:
+    - ../../build/catapult-config/api-node-0/userconfig/resources/:/userconfig/resources/
+    - ../../data/api-node-0:/data:rw
+    - ../../bin/bash:/bin-mount
+    - ../../build/state:/state
+  
   api-node-broker-0:
     build: dockerfiles/catapult
     command: bash -c "/bin/bash /userconfig/startBroker.sh"
@@ -27,4 +54,6 @@ services:
     - ../../data/api-node-0:/data:rw
     - ../../bin/bash:/bin-mount
     - ../../build/state:/state
+    depends_on:
+    - api-node-0
 
